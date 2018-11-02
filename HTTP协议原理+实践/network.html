@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CORS跨域请求的限制与解决</title>
+</head>
+<body>
+  <p>CORS跨域请求的限制与解决</p>
+  <!-- 服务器端解决跨域 'Access-Control-Allow-Origin': '*' -->
+  <script>
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', 'http://localhost:8887')
+    xhr.send()
+  </script>
+  <!-- JSONP 解决跨域 -->
+  <script src="http://localhost:8887"></script>
+  <script src="script.js"></script>
+  <script>
+    fetch('http://localhost:8887', {
+      method: 'PUT',
+      headers: {
+        'X-Test-Cors': '123'
+      }
+    })
+  </script>
+</body>
+</html>

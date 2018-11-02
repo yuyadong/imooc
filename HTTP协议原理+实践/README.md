@@ -44,3 +44,11 @@
 
 ## HTTP 访问网页整个过程
 ![访问网页整个过程](section3.png)
+
+## CORS跨域请求的限制与解决 
+* 服务器 
+  * 同源限制 `'Access-Control-Allow-Origin': '*'`
+  * 自定义 Headers `'Access-Control-Allow-Headers': 'X-Test-Cors'`
+  * 预请求 OPTIONS `'Access-Control-Allow-Methods': 'POST, PUT, DELECT'`
+  * 预请求时间不加载预请求 `'Access-Control-Max-Age': '1000'`
+* JSONP `<script src="jsonp.js"></script>`
