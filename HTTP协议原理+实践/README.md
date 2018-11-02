@@ -59,3 +59,6 @@
 #### Last-Modified
 * 验证修改时间  
 * 配合 If-Modified-Since 或者 If-Unmodified-Since 使用
+#### Etag
+* 数据签名  
+* 配合 If-Match 或者 If-Non-Match 使用
