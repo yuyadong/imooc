@@ -39,5 +39,8 @@
 * URL `统一资源定位器` `http://chatroom.qah5.wjrmt.cn/chat?bar_id=bar7ba8c088a&bar_uid=407ac248040800f5f22ee068492e3358144d082f&app_id=12&activity_id=1638`
 * URN `永久统一资源定位符` `在资源移动后还能被找到` `目前没有成熟使用方案`
 
+## HTTP 报文格式
+`curl -v http://www.baidu.com`
+
 ## HTTP 访问网页整个过程
 ![访问网页整个过程](section3.png)
