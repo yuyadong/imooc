@@ -61,5 +61,8 @@
 * 配合 If-Modified-Since 或者 If-Unmodified-Since 使用
 #### Etag
 * 数据签名  
-* 配合 If-Match 或者 If-Non-Match 使用
+* 配合 If-Match 或者 If-None-Match 使用
 * 对比资源的签名判断是否使用缓存
+
+## HTTP 长链接
+* Chrome HTTP 6个TCP链接并发限制

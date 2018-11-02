@@ -12,12 +12,24 @@ http.createServer((request, response) => {
     response.end(html)
   }
   if (request.url === '/script.js') {
-    response.writeHead(200, {
-      'Content-Type': 'text/javascript',
-      // 解决浏览器长缓存问题通过打包后的 hash
-      'Cache-Control': 'max-age=20'
-    })
-    response.end('console.log("script loaded twice")')
+    const etag = request.headers['if-none-match']
+    if (etag === '777') {
+      response.writeHead(304, {
+        'Content-Type': 'text/javascript',
+        'Cache-Control': 'max-age=200000000, no-store',
+        'Last-Modified': '123',
+        'Etag': '777'
+      })
+      response.end('123')
+    } else {
+      response.writeHead(200, {
+        'Content-Type': 'text/javascript',
+        'Cache-Control': 'max-age=200000000, no-store',
+        'Last-Modified': '123',
+        'Etag': '777'
+      })
+      response.end('console.log("script loaded twice")')
+    }
   }
 }).listen(8888)
 
