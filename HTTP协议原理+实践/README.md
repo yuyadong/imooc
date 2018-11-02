@@ -56,4 +56,6 @@
 ## 缓存验证
 ![访问网页整个过程](cache.png)
 ### 验证头
-* Last-Modified 
+#### Last-Modified
+* 验证修改时间  
+* 配合 If-Modified-Since 或者 If-Unmodified-Since 使用
