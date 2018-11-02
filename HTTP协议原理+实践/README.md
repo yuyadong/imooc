@@ -12,3 +12,7 @@
 * 只有一个命令GET
 * 没有HEADER等描述数据的信息
 * 服务器发送完毕，就关闭TCP链接 `TCP 链接对应多个 HTTP 请求`
+### HTTP / 1.0
+* 增加很多命令 `GET POST`
+* 增加 status code header
+* 多字符集支持、多部分发送、权限、缓存等
