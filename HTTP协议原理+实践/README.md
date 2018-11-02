@@ -50,5 +50,5 @@
   * 同源限制 `'Access-Control-Allow-Origin': '*'`
   * 自定义 Headers `'Access-Control-Allow-Headers': 'X-Test-Cors'`
   * 预请求 OPTIONS `'Access-Control-Allow-Methods': 'POST, PUT, DELECT'`
-  * 预请求时间不加载预请求 `'Access-Control-Max-Age': '1000'`
+  * 预请求时间内不加载预请求 `'Access-Control-Max-Age': '1000'`
 * JSONP `<script src="jsonp.js"></script>`
