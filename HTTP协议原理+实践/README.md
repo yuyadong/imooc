@@ -52,3 +52,6 @@
   * 预请求 OPTIONS `'Access-Control-Allow-Methods': 'POST, PUT, DELECT'`
   * 预请求时间内不加载预请求 `'Access-Control-Max-Age': '1000'`
 * JSONP `<script src="jsonp.js"></script>`
+
+## 缓存验证
+![访问网页整个过程](cache.png)
