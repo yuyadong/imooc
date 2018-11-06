@@ -5,6 +5,6 @@
   * 组件化
   * 响应式原理
 * 编译
- * parse `解析`
- * optimize `优化`
- * codegen `代码生成`
+  * parse `解析`
+  * optimize `优化`
+  * codegen `代码生成`
