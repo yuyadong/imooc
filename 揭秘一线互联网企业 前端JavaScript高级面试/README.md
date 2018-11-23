@@ -5,7 +5,10 @@
   * export
   * export default
 ```javascript
+// util1.js
 export default fn() {
   console.log('fn')
 }
+
+import fn from 'util1'
 ```
