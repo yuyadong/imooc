@@ -4,3 +4,8 @@
   * import
   * export
   * export default
+` javascript
+export default fn() {
+  console.log('fn')
+}
+`
