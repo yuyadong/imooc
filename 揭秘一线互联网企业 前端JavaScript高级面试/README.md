@@ -24,3 +24,80 @@ export function fn2() {
 
 import { fn1, fn2 } from 'util1'
 ```
+
+##  原型
+* 模块化
+  * jQuery
+  * Zepto
+```javascript
+// jQuery
+(function (window) {
+  var jQuery = function (selector) {
+    return new jQuery.fn.init(selector)
+  }
+
+  jQuery.fn = jQuery.prototype = {
+    constructor: 'jQuery',
+    css: function (key, value) {
+      console.log('css')
+    },
+    html: function(value) {
+      console.log('html')
+    }
+  }
+
+  var init = jQuery.fn.init = function (selector) {
+    var slice = Array.prototype.slice
+    var dom = slice.call(document.querySelectorAll(selector))
+
+    var i, len = dom ? dom.length : 0
+    for (i = 0; i < len; i++) this[i] = dom[i]
+    this.length = len
+    this.selector = selector || ''
+  }
+
+  init.prototype = jQuery.fn
+  window.$ = jQuery
+})(window)
+```
+
+```javascript
+// Zepto
+(function (window) {
+  function Zepto(dom, selector) {
+    var i, len = dom ? dom.length : 0
+    for (i = 0; i < len; i++) this[i] = dom[i]
+    this.length = len
+    this.selector = selector || ''
+  }
+  
+  var zepto = {}
+  
+  zepto.init = function (selector) {
+    var slice = Array.prototype.slice
+    var dom = slice.call(document.querySelectorAll(selector))
+    return zepto.Z(dom, selector)
+  }
+  
+  zepto.Z = function (dom, selector) {
+    return new Zepto(dom, selector)
+  }
+  
+  var $ = function (selector) {
+    return zepto.init(selector)
+  }
+
+  window.$ = $
+
+  $.fn = {
+    css: function (key, value) {
+      return this
+    },
+    html: function(value) {
+      return this
+    }
+  }
+
+  Zepto.prototype = $.fn
+})(window)
+```
