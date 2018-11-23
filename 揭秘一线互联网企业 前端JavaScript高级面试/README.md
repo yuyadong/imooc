@@ -101,3 +101,22 @@ import { fn1, fn2 } from 'util1'
   Zepto.prototype = $.fn
 })(window)
 ```
+
+##  单线程 异步
+* 单线程 `一次只能执行一个任务`
+* 避免 DOM 渲染冲突 `JS 执行的时候，浏览器 DOM 渲染会暂停`
+```javascript
+// 单线程 - 1
+console.log('start')
+var i, sum = 0
+for (i = 0; i < 1000000000; i++) {
+  sum++
+}
+console.log(sum)
+console.log('end')
+
+// 单线程 - 2
+console.log('start')
+alert('Hello World')
+console.log('end')
+```
