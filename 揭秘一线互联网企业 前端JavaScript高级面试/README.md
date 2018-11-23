@@ -109,7 +109,6 @@ import { fn1, fn2 } from 'util1'
   * 两段 JS 不能同时执行
   * JS 本身是单线程，JS 执行与浏览器渲染也在一个单线程中
   * webworker 支持 JS 多线程，但是不能访问 DOM
-* 异步 `单线程解决方案`
 ```javascript
 // 单线程 - 1
 console.log('start')
@@ -124,4 +123,13 @@ console.log('end')
 console.log('start')
 alert('Hello World')
 console.log('end')
+```
+* 异步 `单线程解决方案`
+```javascript
+console.log(100)
+setTimeout(function () {
+console.log(200)
+}, 1000)
+console.log(300)
+console.log(400)
 ```
