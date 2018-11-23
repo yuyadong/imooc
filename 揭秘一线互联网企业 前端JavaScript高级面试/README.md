@@ -6,9 +6,21 @@
   * export default
 ```javascript
 // util1.js
-export default fn() {
+export default function fn() {
   console.log('fn')
 }
 
 import fn from 'util1'
+```
+```javascript
+// util2.js
+export function fn1() {
+  console.log('fn1')
+}
+
+export function fn2() {
+  console.log('fn1')
+}
+
+import { fn1, fn2 } from 'util1'
 ```
