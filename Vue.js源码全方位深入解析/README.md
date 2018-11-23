@@ -8,3 +8,10 @@
   * 解析 `parse`
   * 优化 `optimize`
   * 代码生成 `codegen`
+* 扩展
+  * event v-model
+  * slot keep-alive
+  * transition
+* 生态
+  * Vue-Router
+  * Vuex

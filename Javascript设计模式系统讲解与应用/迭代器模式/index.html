@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p>jquery each</p>
+  <p>jquery each</p>
+  <p>jquery each</p>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    let arr = [1, 2, 3]
+    let nodeList = document.getElementsByTagName('p')
+    let $p = $('p')
+
+    // arr.forEach(function (item) {
+    //   console.log(item)
+    // })
+    // let i, length = nodeList.length
+    // for (i = 0; i < length; i++) {
+    //   console.log(nodeList[i])
+    // }
+    // $p.each(function (key, p) {
+    //   console.log(key, p)
+    // })
+    
+    // 循序遍历有序集合 数组
+    // 使用者不需要知道集合内部结构
+    function each(data) {
+      let $data = $(data)
+      $data.each(function (key, p) {
+        console.log(key, p)
+      })
+    }
+    each(arr)
+    each(nodeList)
+    each($p)
+  </script>
+</body>
+</html>

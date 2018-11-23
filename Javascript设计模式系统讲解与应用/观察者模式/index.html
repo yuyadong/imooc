@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="img"></div>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script src="jquery-callback.js"></script>
+  <script src="promise.js"></script>
+  <script>
+    loadImg('https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1388099172,1827933865&fm=173&app=25&f=JPEG?w=218&h=146&s=671419C786CAAF1D99D5988803002091')
+      .then(img => {
+        document.querySelector('.img').appendChild(img)
+        return img
+      })
+      .then(img => {
+        console.log(img.width)
+        return img
+      })
+      .then(img => {
+        console.log(img.height)
+      })
+  </script>
+</body>
+</html>
