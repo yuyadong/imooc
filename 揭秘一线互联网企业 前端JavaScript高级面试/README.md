@@ -26,9 +26,8 @@ import { fn1, fn2 } from 'util1'
 ```
 
 ##  原型
-* 模块化
-  * jQuery
-  * Zepto
+* jQuery
+* Zepto
 ```javascript
 // jQuery
 (function (window) {
